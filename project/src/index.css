@@ -1,0 +1,569 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-dark text-gray-100 font-sans min-h-screen;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-background-light bg-opacity-40 backdrop-blur-sm border border-gray-700 rounded-xl shadow-lg;
+  }
+  
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:border-neon-blue hover:shadow-[0_0_15px_rgba(67,97,238,0.5)];
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-neon-blue text-white font-semibold rounded-lg transition-all duration-300 hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(67,97,238,0.6)] disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-background-light border border-neon-blue text-white font-semibold rounded-lg transition-all duration-300 hover:bg-neon-blue/10 hover:shadow-[0_0_10px_rgba(67,97,238,0.4)] disabled:opacity-50;
+  }
+
+  .btn-danger {
+    @apply px-6 py-2 bg-error text-white font-semibold rounded-lg transition-all duration-300 hover:bg-error-dark hover:shadow-[0_0_10px_rgba(239,68,68,0.5)] disabled:opacity-50;
+  }
+
+  .nav-link {
+    @apply relative px-3 py-2 font-medium text-gray-300 hover:text-white transition-colors;
+  }
+
+  .nav-link-active {
+    @apply text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-neon-blue;
+  }
+
+  .dropdown {
+    @apply glass-card p-2 absolute right-0 mt-2 min-w-[200px] z-20;
+  }
+
+  .input-field {
+    @apply w-full bg-background-dark bg-opacity-80 border border-gray-700 rounded-lg px-4 py-2 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-blue;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Loader styles */
+.loader {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add these custom utility classes for the cinema perspective */
+.perspective-1000 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Scale classes for the seat rows */
+.scale-85 { transform: scale(0.85); }
+.scale-87 { transform: scale(0.87); }
+.scale-89 { transform: scale(0.89); }
+.scale-91 { transform: scale(0.91); }
+.scale-93 { transform: scale(0.93); }
+.scale-95 { transform: scale(0.95); }
+.scale-97 { transform: scale(0.97); }
+.scale-99 { transform: scale(0.99); }
+.scale-101 { transform: scale(1.01); }
+.scale-103 { transform: scale(1.03); }
+
+/* 3D Cinema Seating Styles - Enhanced for a more realistic theater */
+.cinema-perspective {
+  perspective: 1400px;
+  perspective-origin: 50% 30%; /* Moved from 40% to 30% to see more of the floor */
+}
+
+.cinema-container {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.theater-floor {
+  position: absolute;
+  border-top: 2px solid rgba(67, 97, 238, 0.3);
+  border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+  pointer-events: none;
+}
+
+/* Theater side walls */
+.theater-wall-left,
+.theater-wall-right {
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.5));
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: -5;
+}
+
+.theater-wall-left {
+  border-right: 1px solid rgba(67, 97, 238, 0.2);
+}
+
+.theater-wall-right {
+  border-left: 1px solid rgba(67, 97, 238, 0.2);
+}
+
+.seat-row {
+  transform-style: preserve-3d;
+  /* margin-bottom: 0px; Increased spacing between rows to emphasize stairs */
+  position: relative;
+  z-index: auto; /* Let Z-index be determined by position in DOM */
+}
+.seat-row {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+.seat-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 1px; /* Added horizontal margin between seats */
+  transform-style: preserve-3d;
+}
+
+.seat-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.2s ease-out;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Seat bottom */
+.seat-3d::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px; /* Increased from 6px to 8px */
+  bottom: -8px; /* Adjusted to match height */
+  left: 0;
+  background-color: inherit;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  opacity: 0.6;
+}
+
+/* Seat leg */
+.seat-leg {
+  width: 6px; /* Increased from 4px to 6px */
+  height: 10px; /* Increased from 8px to 10px */
+  background-color: rgba(75, 85, 99, 0.8);
+  margin: 0 auto;
+  border-radius: 0 0 2px 2px; /* Added subtle rounding */
+}
+
+.seat-available::after {
+  background-color: rgba(55, 65, 81, 0.7);
+}
+
+.seat-premium::after {
+  background-color: rgba(139, 92, 246, 0.3);
+}
+
+.seat-selected::after {
+  background-color: rgba(67, 97, 238, 0.5);
+}
+
+.seat-booked::after {
+  background-color: rgba(107, 114, 128, 0.5);
+}
+
+.screen-main {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: screenPulse 4s infinite alternate ease-in-out;
+}
+
+/* Enhanced, more subtle screen reflection animations */
+.screen-reflection-1 {
+  position: absolute;
+  width: 100%;
+  height: 40%; 
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  transform: skewX(-30deg);
+  animation: reflectionSweep1 12s infinite linear;
+  top: 30%;
+  left: -150%;
+}
+
+.screen-reflection-2 {
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  transform: skewX(-45deg);
+  animation: reflectionSweep2 18s infinite linear;
+  top: 10%;
+  left: -150%;
+}
+
+/* Screen floor */
+.screen-floor {
+  opacity: 0.4;
+  animation: floorPulse 4s infinite alternate ease-in-out;
+}
+
+/* Row highlighting on hover with depth */
+.seat-row:hover {
+  z-index: 20;
+  transform: translateZ(5px) scale(1.02);
+}
+
+/* Create staircase shadows */
+.seat-row::after {
+  content: '';
+  position: absolute;
+  height: 22px;
+  left: 0;
+  right: 0;
+  bottom: -22px;
+  background: linear-gradient(to bottom, rgba(67, 97, 238, 0.3), transparent);
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  pointer-events: none;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* Add stair riser for more visible steps - Adjusted for downward slope */
+.seat-row::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
+  border-top: 2px solid rgba(67, 97, 238, 0.25);
+  transform: rotateX(-90deg) translateY(-20px);
+  transform-origin: top;
+  pointer-events: none;
+}
+
+/* Enhance selected seat styles */
+.seat-selected {
+  box-shadow: 0 0 15px rgba(67, 97, 238, 0.8); /* Enhanced glow effect */
+  transform: translateZ(3px); /* Makes selected seats "pop out" more */
+}
+
+@keyframes screenPulse {
+  0% {
+    box-shadow: 0 -8px 15px -4px rgba(67, 97, 238, 0.4);
+  }
+  100% {
+    box-shadow: 0 -8px 30px -2px rgba(67, 97, 238, 0.7);
+  }
+}
+
+@keyframes floorPulse {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes reflectionSweep1 {
+  0%, 5% {
+    left: -150%;
+  }
+  50%, 100% {
+    left: 150%;
+  }
+}
+
+@keyframes reflectionSweep2 {
+  0%, 15% {
+    left: -150%;
+  }
+  60%, 100% {
+    left: 150%;
+  }
+}
+
+/* Scale classes for perspective */
+.scale-80 { transform: scale(0.80); }
+.scale-82 { transform: scale(0.82); }
+.scale-84 { transform: scale(0.84); }
+.scale-86 { transform: scale(0.86); }
+.scale-88 { transform: scale(0.88); }
+.scale-90 { transform: scale(0.90); }
+.scale-92 { transform: scale(0.92); }
+.scale-94 { transform: scale(0.94); }
+.scale-96 { transform: scale(0.96); }
+.scale-98 { transform: scale(0.98); }
+.scale-100 { transform: scale(1.00); }
+.scale-102 { transform: scale(1.02); }
+.scale-104 { transform: scale(1.04); }
+.scale-106 { transform: scale(1.06); }
+.scale-108 { transform: scale(1.08); }
+.scale-110 { transform: scale(1.10); }
+
+/* Responsive breakpoint for tiny screens */
+@media (min-width: 400px) {
+  .xs\:w-6 {
+    width: 1.5rem;
+  }
+  .xs\:h-6 {
+    height: 1.5rem;
+  }
+  .xs\:gap-2 {
+    gap: 0.5rem;
+  }
+}
+
+/* Enhanced 3D Theater Styling */
+.screen-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto 0rem; /* Added margin below screen */
+  transform-style: preserve-3d;
+  transform: translateZ(-30px); /* Push the screen forward in the scene */
+}
+
+.screen-surface {
+  position: relative;
+  height: 2rem;
+  background: linear-gradient(180deg, rgba(67, 97, 238, 0.15), rgba(30, 41, 59, 0.3));
+  border-radius: 50% / 100% 100% 0 0;
+  border: 1px solid rgba(67, 97, 238, 0.6);
+  border-bottom: none;
+  transform: rotateX(60deg) perspective(200px);
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.screen-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 0, 119, 0.167), rgba(255, 0, 0, 0.1), rgba(13, 0, 255, 0.257));
+  transform: translateX(-100%);
+  animation: screenSweep 20s infinite ease;
+}
+
+@keyframes screenSweep {
+  0%, 20% {
+    transform: translateX(-100%);
+  }
+  80%, 100% {
+    transform: translateX(100%);
+  }
+}
+
+.screen-edge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 6px;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  background: linear-gradient(to bottom, rgba(67, 97, 238, 0.8), rgba(30, 41, 59, 0.4));
+  border: 1px solid rgba(67, 97, 238, 0.6);
+  border-top: none;
+  border-radius: 50% / 0 0 100% 100%;
+  box-shadow: 0 2px 5px rgba(67, 97, 238, 0.3);
+}
+
+.screen-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #4361ee;
+  text-shadow: 0 0 8px rgba(67, 97, 238, 0.5);
+  letter-spacing: 1px;
+}
+
+.theater-floor-container {
+  position: absolute;
+  width: 150%;
+  left: -25%;
+  height: calc(100% + 4rem);
+  bottom: -4rem;
+  transform-style: preserve-3d;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.theater-floor {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.3));
+  transform: rotateX(60deg);
+  transform-origin: center top;
+}
+
+.theater-carpet {
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMTUxYzI4Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMxMDEzMWYiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=');
+  opacity: 0.3;
+  transform: rotateX(60deg);
+  transform-origin: center top;
+}
+
+/* .aisle-lights {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto 1rem;
+} */
+
+/* .aisle-light {
+  height: 2px;
+  width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(67, 97, 238, 0.4), transparent);
+} */
+
+.seats-container {
+  transform-style: preserve-3d;
+  perspective: 1500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotateX(25deg); /* Increased angle for better downward visibility */
+  transform-origin: center bottom; /* Changed from top to bottom to reverse perspective */
+  padding: 1rem 0 3rem; /* Added padding to accommodate the new perspective */
+  z-index: 1;
+}
+.seat-row {
+  transform-style: preserve-3d;
+  /* margin-bottom: 0px; Increased spacing between rows to emphasize stairs */
+}
+
+.seat-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+/* 3D seat styling */
+.seat-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  font-size: 0.65rem;
+}
+
+/* Seat bottom */
+.seat-3d::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 4px;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  background-color: inherit;
+  opacity: 0.7;
+}
+
+/* Seat leg */
+.seat-leg {
+  width: 3px;
+  height: 6px;
+  background-color: rgba(75, 85, 99, 0.8);
+}
+
+/* Seat status styles */
+.seat-available::after {
+  background-color: rgba(55, 65, 81, 0.7);
+}
+
+.seat-premium::after {
+  background-color: rgba(139, 92, 246, 0.3);
+}
+
+.seat-selected {
+  box-shadow: 0 0 10px rgba(67, 97, 238, 0.7);
+  transform: translateZ(1px);
+}
+
+.seat-selected::after {
+  background-color: rgba(67, 97, 238, 0.7);
+}
+
+.seat-booked::after {
+  background-color: rgba(107, 114, 128, 0.6);
+}
+
+/* Media query adjustments */
+@media (max-width: 640px) {
+  .seat-3d {
+    font-size: 0.6rem;
+  }
+  
+  .seat-leg {
+    height: 4px;
+  }
+  
+  .screen-surface {
+    height: 2rem;
+  }
+  
+  .screen-label {
+    bottom: -1.25rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 400px) {
+  .seat-3d {
+    font-size: 0.55rem;
+  }
+}
+.row-label {
+  display: inline-block;
+  position: fixed;
+  /* transform-style: preserve-3d; */
+  transition: all 0.3s ease;
+}
+@media (max-width: 640px) {
+  .row-label {
+    font-size: 0.75rem;
+    width: 1.25rem;
+  }
+}

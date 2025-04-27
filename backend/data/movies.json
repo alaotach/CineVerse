@@ -1,0 +1,511 @@
+[
+  {
+    "banner": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+    "cast": [
+      "AMITABH BACHCHAN",
+      "JAYA",
+      "DHARMENDRA",
+      "HEMA MALINI"
+    ],
+    "description": "| AMITABH BACHCHAN | JAYA | DHARMENDRA | HEMA MALINI |",
+    "director": "aryan khan",
+    "duration": "5h 12m",
+    "genres": [
+      "Action"
+    ],
+    "id": 1745646332,
+    "language": "Hindi",
+    "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+    "rating": 7.0,
+    "releaseDate": "Jan 12, 1947",
+    "title": "Sholay"
+  },
+  {
+    "id": 1745646332,
+    "title": "Avengers: Secret Wars",
+    "director": "Russo Brothers",
+    "cast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "duration": 155,
+    "language": "English",
+    "releaseDate": "2025-05-01",
+    "description": "The epic conclusion to the Multiverse Saga brings together heroes from across dimensions.",
+    "rating": "PG-13",
+    "poster": "https://example.com/images/avengers_secret_wars.jpg",
+    "trailer": "https://youtube.com/watch?v=example1"
+  },
+  {
+    "banner": "https://images.thedirect.com/media/article_full/avengers-endgame-falcon-winter-soldier.jpg",
+    "cast": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Chris Hemsworth",
+      "Scarlett Johansson"
+    ],
+    "description": "After Thanos wiped out half of all life in the universe, the remaining Avengers must do what's necessary to undo the Mad Titan's deed.",
+    "director": "Anthony Russo, Joe Russo",
+    "duration": "3h 1m",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "id": 1745646333,
+    "language": "English",
+    "poster": "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg",
+    "rating": 8.4,
+    "releaseDate": "Apr 26, 2019",
+    "title": "Avengers: Endgame"
+  },
+  {
+    "banner": "https://rukminim3.flixcart.com/image/850/1000/k77xx8w0/poster/c/g/t/medium-the-shawshank-redemption-movie-poster-for-room-with-gloss-original-imafphnwmxjkvfjf.jpeg?q=90&crop=false",
+    "cast": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton"
+    ],
+    "description": "Over the course of several years, two convicts form a friendship, seeking consolation and eventually redemption through basic compassion.",
+    "director": "Frank Darabont",
+    "duration": "2h 22m",
+    "genres": [
+      "Drama"
+    ],
+    "id": 1745646334,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/I/51NiGlapXlL._AC_.jpg",
+    "rating": 9.3,
+    "releaseDate": "Sep 23, 1994",
+    "title": "The Shawshank Redemption"
+  },
+  {
+    "banner": "https://variety.com/wp-content/uploads/2019/10/parasite-end-scene.jpg",
+    "cast": [
+      "Song Kang-ho",
+      "Lee Sun-kyun",
+      "Cho Yeo-jeong",
+      "Choi Woo-shik"
+    ],
+    "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    "director": "Bong Joon Ho",
+    "duration": "2h 12m",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Comedy"
+    ],
+    "id": 1745646335,
+    "language": "Korean",
+    "poster": "https://play-lh.googleusercontent.com/gh0v4Gv39DwNiI-AKCtUV65G5ExKEot5vtN4EOYPDXR-f49ZsXU2oVfFb4TLi-4Qy0U0",
+    "rating": 8.5,
+    "releaseDate": "Nov 8, 2019",
+    "title": "Parasite"
+  },
+  {
+    "banner": "https://static.toiimg.com/photo/msid-5348868/5348868.jpg",
+    "cast": [
+      "Aamir Khan",
+      "Madhavan",
+      "Sharman Joshi",
+      "Kareena Kapoor"
+    ],
+    "description": "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them 'idiots'.",
+    "director": "Rajkumar Hirani",
+    "duration": "2h 50m",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "id": 1745646336,
+    "language": "Hindi",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+    "rating": 8.4,
+    "releaseDate": "Dec 25, 2009",
+    "title": "3 Idiots"
+  },
+  {
+    "banner": "https://dunenewsnet.com/wp-content/uploads/2021/08/Dune-Movie-Official-Poster-banner-feature.jpg",
+    "cast": [
+      "TimothÃ©e Chalamet",
+      "Zendaya",
+      "Rebecca Ferguson",
+      "Javier Bardem"
+    ],
+    "description": "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
+    "director": "Denis Villeneuve",
+    "duration": "2h 46m",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "id": 1745646337,
+    "language": "English",
+    "poster": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg",
+    "rating": 8.8,
+    "releaseDate": "Mar 1, 2024",
+    "title": "Dune: Part Two"
+  },
+  {
+    "banner": "https://images.hindustantimes.com/img/2022/03/25/1600x900/RRR-Movie-Review_1648213632383_1648213632526.jpg",
+    "cast": [
+      "N.T. Rama Rao Jr.",
+      "Ram Charan",
+      "Ajay Devgn",
+      "Alia Bhatt"
+    ],
+    "description": "A fictional story about two legendary revolutionaries and their journey away from home before they started fighting for their country in the 1920s.",
+    "director": "S.S. Rajamouli",
+    "duration": "3h 7m",
+    "genres": [
+      "Action",
+      "Drama",
+      "Historical"
+    ],
+    "id": 1745646338,
+    "language": "Telugu",
+    "poster": "https://m.media-amazon.com/images/M/MV5BODUwNDNjYzctODUxNy00ZTA2LWIyYTEtMDc5Y2E5ZjBmNTMzXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
+    "rating": 8.0,
+    "releaseDate": "Mar 24, 2022",
+    "title": "RRR"
+  },
+  {
+    "id": 1745646346,
+    "title": "Fast & Furious 11: Final Ride",
+    "director": "Justin Lin",
+    "cast": ["Vin Diesel", "Michelle Rodriguez", "John Cena"],
+    "genre": ["Action", "Crime", "Thriller"],
+    "duration": 142,
+    "language": "English",
+    "releaseDate": "2025-04-15",
+    "description": "The Fast family comes together for one last ride in this explosive finale.",
+    "rating": "PG-13",
+    "poster": "https://example.com/images/fast_furious_11.jpg",
+    "trailer": "https://youtube.com/watch?v=example2"
+  },
+  {
+    "banner": "https://www.hollywoodreporter.com/wp-content/uploads/2022/02/FJ_0002419_R4.jpg",
+    "cast": [
+      "Robert Pattinson",
+      "ZoÃ« Kravitz",
+      "Jeffrey Wright",
+      "Colin Farrell"
+    ],
+    "description": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+    "director": "Matt Reeves",
+    "duration": "2h 56m",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "id": 1745646339,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_.jpg",
+    "rating": 8.3,
+    "releaseDate": "Mar 4, 2022",
+    "title": "The Batman"
+  },
+  {
+    "banner": "https://deadline.com/wp-content/uploads/2022/04/Everything-Everywhere-All-At-Once-Film-Still.jpg",
+    "cast": [
+      "Michelle Yeoh",
+      "Stephanie Hsu",
+      "Ke Huy Quan",
+      "Jamie Lee Curtis"
+    ],
+    "description": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save the world by exploring other universes connecting with the lives she could have led.",
+    "director": "Daniel Kwan, Daniel Scheinert",
+    "duration": "2h 19m",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "id": 1745646340,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_FMjpg_UX1000_.jpg",
+    "rating": 8.2,
+    "releaseDate": "Apr 8, 2022",
+    "title": "Everything Everywhere All at Once"
+  },
+  {
+    "banner": "https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/14552c93-d318-4563-a00b-343df7e35d0b/4beb5159-7570-4f7e-bd37-6f7ea0ccff52?host=wbd-images.prod-vod.h264.io&partner=beamcom",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page",
+      "Tom Hardy"
+    ],
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "director": "Christopher Nolan",
+    "duration": "2h 28m",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "id": 1745646341,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
+    "rating": 8.8,
+    "releaseDate": "Jul 16, 2010",
+    "title": "Inception"
+  },
+  {
+    "banner": "https://cdn.britannica.com/82/152982-050-11159CF4/Daniel-Radcliffe-Rupert-Grint-Emma-Watson-Harry.jpg",
+    "cast": [
+      "Daniel Radcliffe",
+      "Emma Watson",
+      "Rupert Grint",
+      "Alan Rickman",
+      "Ralph Fiennes"
+    ],
+    "description": "Experience the entire magical journey of Harry Potter, from his first year at Hogwarts to the final battle with Lord Voldemort. This special marathon screening includes all eight films back-to-back.",
+    "director": "Various",
+    "duration": "19h 38m",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Marathon"
+    ],
+    "id": 1745646342,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg",
+    "rating": 9.2,
+    "releaseDate": "Apr 30, 2025",
+    "title": "Harry Potter Marathon: All 8 Films"
+  },
+  {
+    "banner": "https://i0.wp.com/pixarplanet.com/blog/wp-content/uploads/2023/04/Toy-Story-1995-Banner-copy-scaled.webp",
+    "cast": [
+      "Tom Hanks",
+      "Tim Allen",
+      "Don Rickles",
+      "Jim Varney"
+    ],
+    "description": "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.",
+    "director": "John Lasseter",
+    "duration": "1h 21m",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy"
+    ],
+    "id": 1745646343,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_.jpg",
+    "rating": 8.3,
+    "releaseDate": "Nov 22, 1995",
+    "title": "Toy Story (1995)"
+  },
+  {
+    "banner": "https://assets-prd.ignimgs.com/2022/07/15/spirited-away-1657915023520.jpg",
+    "cast": [
+      "Daveigh Chase",
+      "Suzanne Pleshette",
+      "Miyu Irino",
+      "Rumi Hiiragi"
+    ],
+    "description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, where humans are changed into beasts.",
+    "director": "Hayao Miyazaki",
+    "duration": "2h 5m",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Family"
+    ],
+    "id": 1745646344,
+    "language": "Japanese",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    "rating": 8.6,
+    "releaseDate": "Mar 28, 2003",
+    "title": "Spirited Away"
+  },
+  {
+    "banner": "https://www.slashfilm.com/img/gallery/spider-man-across-the-spider-verse-will-follow-up-its-two-post-credits-scenes-in-the-next-movie/l-intro-1686326764.jpg",
+    "cast": [
+      "Shameik Moore",
+      "Jake Johnson",
+      "Hailee Steinfeld",
+      "Mahershala Ali"
+    ],
+    "description": "Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
+    "director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+    "duration": "1h 57m",
+    "genres": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "id": 1745646345,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg",
+    "rating": 8.4,
+    "releaseDate": "Dec 14, 2018",
+    "title": "Spider-Man: Into the Spider-Verse"
+  },
+  {
+    "id": 1745646349,
+    "title": "Mission: Impossible - Final Mission",
+    "director": "Christopher McQuarrie",
+    "cast": ["Tom Cruise", "Simon Pegg", "Rebecca Ferguson"],
+    "genre": ["Action", "Adventure", "Thriller"],
+    "duration": 148,
+    "language": "English",
+    "releaseDate": "2025-05-02",
+    "description": "Ethan Hunt faces his most impossible mission yet in this thrilling conclusion.",
+    "rating": "PG-13",
+    "poster": "https://example.com/images/mission_impossible_fm.jpg",
+    "trailer": "https://youtube.com/watch?v=example3"
+  },
+  {
+    "banner": "https://i.ytimg.com/vi/rcBAZ3_plwE/maxresdefault.jpg",
+    "cast": [
+      "Team India",
+      "Team Pakistan"
+    ],
+    "description": "The ultimate cricket showdown! Catch the ICC T20 World Cup Final match between arch-rivals India and Pakistan live on the big screen with stadium-like atmosphere and surround sound.",
+    "director": "ICC",
+    "duration": "4h 0m",
+    "genres": [
+      "Sports",
+      "Live Event"
+    ],
+    "id": 1745646346,
+    "language": "English",
+    "poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/icc-t20-world-cup-2022--india-vs-pakistan-et00342266-1666006506.jpg",
+    "rating": 9.5,
+    "releaseDate": "Jun 25, 2025",
+    "title": "ICC T20 World Cup Final: India vs Pakistan"
+  },
+  {
+    "banner": "https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1NTUxMzc2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg",
+    "cast": [
+      "Ryunosuke Kamiki",
+      "Mone Kamishiraishi",
+      "Ryo Narita",
+      "Aoi YÅ«ki"
+    ],
+    "description": "Two strangers find themselves linked in a bizarre way. When a connection forms, will distance be the only thing to keep them apart?",
+    "director": "Makoto Shinkai",
+    "duration": "1h 46m",
+    "genres": [
+      "Animation",
+      "Drama",
+      "Fantasy"
+    ],
+    "id": 1745646347,
+    "language": "Japanese",
+    "poster": "https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_.jpg",
+    "rating": 8.4,
+    "releaseDate": "Apr 7, 2017",
+    "title": "Your Name (Kimi no Na wa)"
+  },
+  {
+    "banner": "https://cdn1.edgedatg.com/aws/v2/abc/TheMoviesLook/blog/3695968/64fa6f7e16985dab79231f2046486c61/1600x900-Q90_64fa6f7e16985dab79231f2046486c61.jpg",
+    "cast": [
+      "Anthony Gonzalez",
+      "Gael GarcÃ­a Bernal",
+      "Benjamin Bratt",
+      "Alanna Ubach"
+    ],
+    "description": "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+    "director": "Lee Unkrich, Adrian Molina",
+    "duration": "1h 45m",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Family"
+    ],
+    "id": 1745646348,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_.jpg",
+    "rating": 8.4,
+    "releaseDate": "Nov 22, 2017",
+    "title": "Coco"
+  },
+  {
+    "banner": "https://i.ytimg.com/vi/RY9eK1Vr4Mo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBd_IEy5FtH_YqeVD4mB53ATniIUQ",
+    "cast": [
+      "World Cup Finalists"
+    ],
+    "description": "Experience the thrill of the FIFA World Cup Final on the big screen with immersive surround sound and a stadium-like atmosphere. Join fellow fans for this special live screening event!",
+    "director": "FIFA",
+    "duration": "3h 0m",
+    "genres": [
+      "Sports",
+      "Live Event"
+    ],
+    "id": 1745646349,
+    "language": "Multilingual",
+    "poster": "https://m.media-amazon.com/images/I/7133WTeLmtL._UF1000,1000_QL80_.jpg",
+    "rating": 9.0,
+    "releaseDate": "Jul 21, 2026",
+    "title": "FIFA World Cup Final: Live Screening"
+  },
+  {
+    "banner": "https://sm.ign.com/ign_ap/gallery/s/star-wars-/star-wars-a-new-hope-where-are-they-now_eu49.jpg",
+    "cast": [
+      "Mark Hamill",
+      "Harrison Ford",
+      "Carrie Fisher",
+      "Alec Guinness"
+    ],
+    "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station.",
+    "director": "George Lucas",
+    "duration": "2h 1m",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "id": 1745646350,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_.jpg",
+    "rating": 8.6,
+    "releaseDate": "May 25, 1977",
+    "title": "Star Wars: A New Hope"
+  },
+  {
+    "banner": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7AEE1F05D10FC37C873176AAA26F777FC1B71E7A6563F36C6B1B497CAB1CEC2/scale?width=1200&aspectRatio=1.78&format=jpeg",
+    "cast": [
+      "Matthew Broderick",
+      "Jeremy Irons",
+      "James Earl Jones",
+      "Whoopi Goldberg"
+    ],
+    "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+    "director": "Roger Allers, Rob Minkoff",
+    "duration": "1h 28m",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Drama"
+    ],
+    "id": 1745646351,
+    "language": "English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg",
+    "rating": 8.5,
+    "releaseDate": "Jun 24, 1994",
+    "title": "The Lion King (1994)"
+  },
+  {
+    "banner": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+    "cast": [
+      "NMMM"
+    ],
+    "description": "HH",
+    "director": "aryan khan",
+    "duration": "5h 12m",
+    "genres": [
+      "Animation"
+    ],
+    "id": 1745786002,
+    "language": "French",
+    "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+    "rating": 0.8,
+    "releaseDate": "Jan 12, 1947",
+    "title": "BNNN"
+  }
+]

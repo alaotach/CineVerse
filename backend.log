@@ -1,0 +1,125 @@
+2025-04-27 20:19:09,534 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:19:09,608 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8080
+2025-04-27 20:19:09,608 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 20:19:09,610 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 20:19:10,018 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:19:10,041 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 20:19:10,055 - werkzeug - INFO -  * Debugger PIN: 264-562-949
+2025-04-27 20:22:00,083 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:22:00,135 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8080
+2025-04-27 20:22:00,135 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 20:22:00,137 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 20:22:00,556 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:22:00,579 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 20:22:00,589 - werkzeug - INFO -  * Debugger PIN: 264-562-949
+2025-04-27 20:22:44,043 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:22:44,092 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8080
+2025-04-27 20:22:44,092 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 20:22:44,094 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 20:22:44,509 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:22:44,536 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 20:22:44,549 - werkzeug - INFO -  * Debugger PIN: 264-562-949
+2025-04-27 20:23:08,968 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:23:09,016 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8080
+2025-04-27 20:23:09,016 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 20:23:09,019 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 20:23:09,438 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:23:09,458 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 20:23:09,469 - werkzeug - INFO -  * Debugger PIN: 264-562-949
+2025-04-27 20:23:27,206 - __main__ - INFO - Returned 8 cinemas
+2025-04-27 20:23:27,212 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:27] "GET /api/cinemas HTTP/1.1" 200 -
+2025-04-27 20:23:27,469 - __main__ - INFO - Returned 8 cinemas
+2025-04-27 20:23:27,471 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:27] "GET /api/cinemas HTTP/1.1" 200 -
+2025-04-27 20:23:27,530 - __main__ - INFO - Found 0 bookings for user 1
+2025-04-27 20:23:27,532 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:27] "GET /api/users/1/bookings HTTP/1.1" 200 -
+2025-04-27 20:23:27,534 - __main__ - INFO - Found 0 bookings for user 1
+2025-04-27 20:23:27,535 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:27] "GET /api/users/1/bookings HTTP/1.1" 200 -
+2025-04-27 20:23:33,306 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:23:33,319 - __main__ - INFO - Returned 20 movies
+2025-04-27 20:23:33,322 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "GET /api/movies HTTP/1.1" 200 -
+2025-04-27 20:23:33,347 - __main__ - INFO - Found 0 bookings for user 1
+2025-04-27 20:23:33,349 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "GET /api/users/1/bookings HTTP/1.1" 200 -
+2025-04-27 20:23:33,563 - __main__ - INFO - Returned 20 movies
+2025-04-27 20:23:33,565 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "GET /api/movies HTTP/1.1" 200 -
+2025-04-27 20:23:33,639 - __main__ - INFO - Found 0 bookings for user 1
+2025-04-27 20:23:33,640 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "GET /api/users/1/bookings HTTP/1.1" 200 -
+2025-04-27 20:23:33,660 - __main__ - INFO - Returned 20 movies
+2025-04-27 20:23:33,663 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "GET /api/movies HTTP/1.1" 200 -
+2025-04-27 20:23:33,878 - __main__ - INFO - Returned 8 cinemas
+2025-04-27 20:23:33,883 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "GET /api/cinemas HTTP/1.1" 200 -
+2025-04-27 20:23:33,890 - __main__ - INFO - Returned 20 movies
+2025-04-27 20:23:33,892 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "GET /api/movies HTTP/1.1" 200 -
+2025-04-27 20:23:33,971 - __main__ - INFO - Found 0 bookings for user 1
+2025-04-27 20:23:33,972 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:33] "GET /api/users/1/bookings HTTP/1.1" 200 -
+2025-04-27 20:23:34,237 - __main__ - INFO - Returned 8 cinemas
+2025-04-27 20:23:34,240 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:34] "GET /api/cinemas HTTP/1.1" 200 -
+2025-04-27 20:23:34,256 - __main__ - INFO - Found 0 bookings for user 1
+2025-04-27 20:23:34,257 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:34] "GET /api/users/1/bookings HTTP/1.1" 200 -
+2025-04-27 20:23:52,514 - __main__ - INFO - Returned movie with ID 1745646346
+2025-04-27 20:23:52,515 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:52] "GET /api/movies/1745646346 HTTP/1.1" 200 -
+2025-04-27 20:23:52,775 - __main__ - INFO - Returned movie with ID 1745646346
+2025-04-27 20:23:52,776 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:23:52] "GET /api/movies/1745646346 HTTP/1.1" 200 -
+2025-04-27 20:24:02,979 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:02] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:24:03,975 - __main__ - INFO - Returned movie with ID 1745646346
+2025-04-27 20:24:03,976 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:03] "GET /api/movies/1745646346 HTTP/1.1" 200 -
+2025-04-27 20:24:03,990 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:24:03,992 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:03] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:24:03,993 - __main__ - INFO - Returned 0 booked seats for showtime ID show-1745692130
+2025-04-27 20:24:03,993 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:03] "GET /api/showtimes/show-1745692130/seats HTTP/1.1" 200 -
+2025-04-27 20:24:04,234 - __main__ - INFO - Returned movie with ID 1745646346
+2025-04-27 20:24:04,235 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:04] "GET /api/movies/1745646346 HTTP/1.1" 200 -
+2025-04-27 20:24:04,281 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:24:04,283 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:04] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:24:04,311 - __main__ - INFO - Returned 0 booked seats for showtime ID show-1745692130
+2025-04-27 20:24:04,312 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:24:04,313 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:04] "GET /api/showtimes/show-1745692130/seats HTTP/1.1" 200 -
+2025-04-27 20:24:04,315 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:04] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:24:04,588 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:24:04,592 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:04] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:24:04,636 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:24:04,637 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:04] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:24:13,470 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:13] "OPTIONS /api/bookings HTTP/1.1" 200 -
+2025-04-27 20:24:13,801 - __main__ - ERROR - Error creating booking: resource deadlock would occur: resource deadlock would occur
+2025-04-27 20:24:13,803 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:13] "[35m[1mPOST /api/bookings HTTP/1.1[0m" 500 -
+2025-04-27 20:24:32,982 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:24:32] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:25:03,651 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:25:03] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:25:33,350 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:25:33] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:26:03,652 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:26:03] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:26:49,347 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:26:49] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:27:28,127 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:27:28,166 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8080
+2025-04-27 20:27:28,166 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-27 20:27:28,169 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 20:27:28,563 - __main__ - INFO - Starting CookMyShow backend on http://localhost:8080/api
+2025-04-27 20:27:28,580 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 20:27:28,593 - werkzeug - INFO -  * Debugger PIN: 264-562-949
+2025-04-27 20:27:36,737 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:36] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:27:36,738 - __main__ - INFO - Returned movie with ID 1745646346
+2025-04-27 20:27:36,740 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:36] "GET /api/movies/1745646346 HTTP/1.1" 200 -
+2025-04-27 20:27:37,055 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:37] "[33mGET /api/health HTTP/1.1[0m" 404 -
+2025-04-27 20:27:37,057 - __main__ - INFO - Returned movie with ID 1745646346
+2025-04-27 20:27:37,058 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:37] "GET /api/movies/1745646346 HTTP/1.1" 200 -
+2025-04-27 20:27:40,755 - __main__ - INFO - Returned movie with ID 1745646346
+2025-04-27 20:27:40,757 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:27:40,757 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:40] "GET /api/movies/1745646346 HTTP/1.1" 200 -
+2025-04-27 20:27:40,759 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:40] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:27:40,762 - __main__ - INFO - Returned 0 booked seats for showtime ID show-1745692130
+2025-04-27 20:27:40,764 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:40] "GET /api/showtimes/show-1745692130/seats HTTP/1.1" 200 -
+2025-04-27 20:27:41,004 - __main__ - INFO - Returned movie with ID 1745646346
+2025-04-27 20:27:41,007 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:41] "GET /api/movies/1745646346 HTTP/1.1" 200 -
+2025-04-27 20:27:41,078 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:27:41,081 - __main__ - INFO - Returned 0 booked seats for showtime ID show-1745692130
+2025-04-27 20:27:41,085 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:41] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:27:41,087 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:41] "GET /api/showtimes/show-1745692130/seats HTTP/1.1" 200 -
+2025-04-27 20:27:41,093 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:27:41,099 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:41] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:27:41,417 - __main__ - INFO - Returned 131 showtimes
+2025-04-27 20:27:41,421 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:41] "GET /api/showtimes HTTP/1.1" 200 -
+2025-04-27 20:27:44,127 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:44] "OPTIONS /api/bookings HTTP/1.1" 200 -
+2025-04-27 20:27:44,424 - __main__ - ERROR - Error creating booking: resource deadlock would occur: resource deadlock would occur
+2025-04-27 20:27:44,426 - werkzeug - INFO - 127.0.0.1 - - [27/Apr/2025 20:27:44] "[35m[1mPOST /api/bookings HTTP/1.1[0m" 500 -

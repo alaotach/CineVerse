@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+    "isAdmin": true
+  },
+  {
+    "id": "2",
+    "name": "Test User",
+    "email": "user@example.com",
+    "password": "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb",
+    "isAdmin": false
+  },
+  {
+    "id": "52fa89f6-7de9-43f7-a792-02abbf78e611",
+    "name": "alaotach",
+    "email": "aryanmi2001@gmail.com",
+    "password": "a99104fe4ae803cff1f28ef487e6a1eb1d482a2a45858fd43d911832e4cbff9d",
+    "isAdmin": true
+  }
+]

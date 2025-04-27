@@ -1,0 +1,10 @@
+^C:\USERS\NOBIT\DOWNLOADS\COOKMYSHOW\BACKEND\BUILD\CMAKEFILES\5AB7B6B5FEBB83F506106988A1F679A2\GENERATE.STAMP.RULE
+setlocal
+C:\MinGW\bin\cmake.exe -SC:/Users/nobit/Downloads/cookmyshow/backend -BC:/Users/nobit/Downloads/cookmyshow/backend/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/nobit/Downloads/cookmyshow/backend/build/cinema_engine.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

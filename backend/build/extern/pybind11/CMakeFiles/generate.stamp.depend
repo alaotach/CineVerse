@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+C:/MinGW/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/MinGW/share/cmake-3.27/Modules/CMakeDependentOption.cmake
+C:/MinGW/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake
+C:/MinGW/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake
+C:/MinGW/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake
+C:/MinGW/share/cmake-3.27/Modules/GNUInstallDirs.cmake
+C:/MinGW/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake
+C:/MinGW/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake
+C:/MinGW/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake
+C:/MinGW/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/nobit/Downloads/cookmyshow/backend/extern/pybind11/CMakeLists.txt
+C:/Users/nobit/Downloads/cookmyshow/backend/extern/pybind11/tools/JoinPaths.cmake
+C:/Users/nobit/Downloads/cookmyshow/backend/extern/pybind11/tools/pybind11Common.cmake
+C:/Users/nobit/Downloads/cookmyshow/backend/extern/pybind11/tools/pybind11NewTools.cmake

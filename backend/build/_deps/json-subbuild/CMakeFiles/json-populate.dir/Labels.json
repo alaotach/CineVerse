@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/json-populate"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/18bfde1f8c7ec7baed15e640b50d26f4/json-populate.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/d80dbd4612222098c8552360ba66d1be/json-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/b6c7b202ba87b9bb6f5fc64957094894/json-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/b6c7b202ba87b9bb6f5fc64957094894/json-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/b6c7b202ba87b9bb6f5fc64957094894/json-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/b6c7b202ba87b9bb6f5fc64957094894/json-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/b6c7b202ba87b9bb6f5fc64957094894/json-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/b6c7b202ba87b9bb6f5fc64957094894/json-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/b6c7b202ba87b9bb6f5fc64957094894/json-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/CMakeFiles/b6c7b202ba87b9bb6f5fc64957094894/json-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"json-populate"
+		],
+		"name" : "json-populate"
+	}
+}

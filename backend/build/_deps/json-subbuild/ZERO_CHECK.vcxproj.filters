@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\18bfde1f8c7ec7baed15e640b50d26f4\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\json-populate-prefix\tmp\json-populate-mkdirs.cmake">
+      <Filter>Buildsystem Input Files\json-populate-prefix\tmp</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5715B377-E2EF-36AA-88B4-DDD0EAE2D270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buildsystem Input Files\json-populate-prefix\tmp">
+      <UniqueIdentifier>{E78EC93B-9E07-3EC8-937E-7A127185AB8E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

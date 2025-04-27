@@ -1,0 +1,6 @@
+C:/Users/nobit/Downloads/cookmyshow/backend/build/CMakeFiles/cinema_engine.dir
+C:/Users/nobit/Downloads/cookmyshow/backend/build/CMakeFiles/INSTALL.dir
+C:/Users/nobit/Downloads/cookmyshow/backend/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/nobit/Downloads/cookmyshow/backend/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/nobit/Downloads/cookmyshow/backend/build/extern/pybind11/CMakeFiles/INSTALL.dir
+C:/Users/nobit/Downloads/cookmyshow/backend/build/extern/pybind11/CMakeFiles/ALL_BUILD.dir

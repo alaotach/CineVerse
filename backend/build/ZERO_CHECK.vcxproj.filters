@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\CMakeFiles\5ab7b6b5febb83f506106988a1f679a2\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\nobit\Downloads\cookmyshow\backend\extern\pybind11\CMakeLists.txt">
+      <Filter>Buildsystem Input Files\extern\pybind11</Filter>
+    </None>
+    <None Include="C:\Users\nobit\Downloads\cookmyshow\backend\extern\pybind11\tools\JoinPaths.cmake">
+      <Filter>Buildsystem Input Files\extern\pybind11\tools</Filter>
+    </None>
+    <None Include="C:\Users\nobit\Downloads\cookmyshow\backend\extern\pybind11\tools\pybind11Common.cmake">
+      <Filter>Buildsystem Input Files\extern\pybind11\tools</Filter>
+    </None>
+    <None Include="C:\Users\nobit\Downloads\cookmyshow\backend\extern\pybind11\tools\pybind11NewTools.cmake">
+      <Filter>Buildsystem Input Files\extern\pybind11\tools</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E576C819-F118-3117-A164-558CB850FC11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buildsystem Input Files\extern\pybind11">
+      <UniqueIdentifier>{BF825891-1706-3E05-9B4C-239CE21C2A4C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buildsystem Input Files\extern\pybind11\tools">
+      <UniqueIdentifier>{4C3E3E30-3AC7-3A87-9417-C1EF2883DAEF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

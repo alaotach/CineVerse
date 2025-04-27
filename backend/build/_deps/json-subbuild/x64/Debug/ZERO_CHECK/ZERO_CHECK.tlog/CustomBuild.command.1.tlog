@@ -1,0 +1,10 @@
+^C:\USERS\NOBIT\DOWNLOADS\COOKMYSHOW\BACKEND\BUILD\_DEPS\JSON-SUBBUILD\CMAKEFILES\18BFDE1F8C7EC7BAED15E640B50D26F4\GENERATE.STAMP.RULE
+setlocal
+C:\MinGW\bin\cmake.exe -SC:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild -BC:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/nobit/Downloads/cookmyshow/backend/build/_deps/json-subbuild/json-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

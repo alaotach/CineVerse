@@ -1,0 +1,504 @@
+[
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "bk-1745693710",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "G12",
+            "G13",
+            "G14"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 3899.9700000000003,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "bk-1745694097",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "D11",
+            "D12",
+            "D13"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 3899.9700000000003,
+        "userId": "52fa89f6-7de9-43f7-a792-02abbf78e611"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "a8fc5e8d-e7a9-4ba6-881a-0ca2f160d64f",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "E10",
+            "E13",
+            "E15"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 3899.9700000000003,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "7183aa76-8c60-4ac0-bf70-5f97b5208468",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            "H6",
+            "I2",
+            "I3",
+            "I4",
+            "I5",
+            "I6"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 12999.9,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "4e91b4ca-b904-4879-b131-5eef45192a6b",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "C12"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "9469d350-fb8c-44ac-97a8-8d1bd347b54a",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "C13"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "148d0a23-0564-4289-bb3c-52781ef398e6",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "D5"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "f039d772-0e37-410f-a688-8345ff298c21",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "C6"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "94fc3a2f-36ab-4860-8855-ed50d5bac9c1",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "C11"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "46384895-faab-462a-ab5d-22865cc18b7c",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "D3"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "a5957575-f604-4daa-a901-9f0c9d25648d",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "B5"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "15676943-f038-4ebf-8923-316439124c66",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "C4"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "85fdf234-c9d5-4efe-b837-0fa8c8fa8538",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "C15"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "1a001950-ccb5-48d2-8c75-e2657728f644",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "H15"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "c8d12486-dce1-4f4c-9637-5f6486505c7d",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "E14"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "bd289288-47f9-4bc3-8195-77e8cbe96c97",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "G16"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "702b3114-1ec4-471f-acf6-b68c2c598ea7",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "A7"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "c5260964-2d23-49f5-a4e4-4fa8e91cd949",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "B14",
+            "G11"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 2599.98,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "106f929c-bebb-4b1a-8b31-791e0841734d",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "H11"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "fd4fe634-e613-4cf8-9968-21b8632f4368",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "E12",
+            "F13"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 2599.98,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "26d77482-8597-4c06-bcd6-96439264b839",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "C7"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "cc1446cb-8f6d-4692-b48e-3e0706ad6808",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "F2",
+            "F4",
+            "F6"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 3899.9700000000003,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "0a4176c2-a776-4257-babf-5c95f733111a",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "B11"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 1299.99,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 2,
+        "cinemaName": "Star Cinema IMAX",
+        "id": "542cc4f1-b174-46fa-b89a-5484fe831434",
+        "movieId": 1745646332,
+        "moviePoster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKIwgOIThq5Dn0AjjgzOVfeQGCN3lLpBQfQ918cbBp4neuu4Uq",
+        "movieTitle": "Sholay",
+        "screenType": "Dolby Atmos",
+        "seats": [
+            "J7",
+            "G3",
+            "F5",
+            "F12",
+            "H13",
+            "H12",
+            "H14",
+            "J12",
+            "J13"
+        ],
+        "showtimeDate": "2025-04-27",
+        "showtimeId": "show-1745692965",
+        "showtimeTime": "12:00 PM",
+        "totalPrice": 11699.91,
+        "userId": "1"
+    },
+    {
+        "bookingDate": "2025-04-27",
+        "cancelled": false,
+        "cinemaId": 8,
+        "cinemaName": "PVR Promenade",
+        "id": "77c0a70a-bea6-413c-bca2-dc7fec94791f",
+        "movieId": 1745646346,
+        "moviePoster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/icc-t20-world-cup-2022--india-vs-pakistan-et00342266-1666006506.jpg",
+        "movieTitle": "ICC T20 World Cup Final: India vs Pakistan",
+        "screenType": "Fan Screening",
+        "seats": [
+            "D14"
+        ],
+        "showtimeDate": "2025-05-01",
+        "showtimeId": "show-1745692130",
+        "showtimeTime": "7:30 PM",
+        "totalPrice": 550.0,
+        "userId": "1"
+    }
+]

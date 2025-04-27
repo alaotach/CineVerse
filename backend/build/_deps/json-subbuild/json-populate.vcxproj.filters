@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\b6c7b202ba87b9bb6f5fc64957094894\json-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\b6c7b202ba87b9bb6f5fc64957094894\json-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\b6c7b202ba87b9bb6f5fc64957094894\json-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\b6c7b202ba87b9bb6f5fc64957094894\json-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\b6c7b202ba87b9bb6f5fc64957094894\json-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\b6c7b202ba87b9bb6f5fc64957094894\json-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\b6c7b202ba87b9bb6f5fc64957094894\json-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\b6c7b202ba87b9bb6f5fc64957094894\json-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\d80dbd4612222098c8552360ba66d1be\json-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\18bfde1f8c7ec7baed15e640b50d26f4\json-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\nobit\Downloads\cookmyshow\backend\build\_deps\json-subbuild\CMakeFiles\json-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5715B377-E2EF-36AA-88B4-DDD0EAE2D270}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
