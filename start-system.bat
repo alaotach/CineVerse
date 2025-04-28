@@ -17,7 +17,7 @@ timeout /t 5 > nul
 
 :: Start the React Frontend
 echo Starting React Frontend on port 5173...
-start "React Frontend" cmd /c "cd project && npm run dev"
+start "React Frontend" cmd /c "cd project && npm i && npm run dev"
 
 echo ===== CookMyShow System Started =====
 echo C++ Backend: http://localhost:8080/api
