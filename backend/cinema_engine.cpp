@@ -18,6 +18,12 @@
 #include <iomanip>
 #include <nlohmann/json.hpp>
 #include <filesystem> // Include filesystem for path resolution
+#include <queue>
+#include <map>
+#include <set>
+#include <list>
+#include <unordered_map>
+#include <functional>
 
 #ifdef _WIN32
 #include <direct.h>
@@ -28,12 +34,6 @@
 
 namespace py = pybind11;
 using json = nlohmann::json;
-
-// Forward declarations
-class Movie;
-class Cinema;
-class Showtime;
-class BookingSystem;
 
 // Function to generate unique IDs
 std::string generate_uuid() {
@@ -87,6 +87,13 @@ std::string trim(const std::string& str) {
     return str.substr(first, last - first + 1);
 }
 
+// Forward declarations
+class Movie;
+class Cinema;
+class Showtime;
+class BookingSystem;
+class SeatManager;  // New class for seat management
+
 // Movie class
 class Movie {
 public:
@@ -134,9 +141,9 @@ public:
         std::istringstream genres_stream(genres_);
         std::string genre;
         while (std::getline(genres_stream, genre, ',')) {
-            genre = trim(genre);
-            if (!genre.empty()) {
-                genres_list.append(genre);
+            std::string trimmed_genre = trim(genre);
+            if (!trimmed_genre.empty()) {
+                genres_list.append(trimmed_genre);
             }
         }
         movie_dict["genres"] = genres_list;
@@ -149,9 +156,9 @@ public:
         std::istringstream cast_stream(cast_);
         std::string actor;
         while (std::getline(cast_stream, actor, ',')) {
-            actor = trim(actor);
-            if (!actor.empty()) {
-                cast_list.append(actor);
+            std::string trimmed_actor = trim(actor);
+            if (!trimmed_actor.empty()) {
+                cast_list.append(trimmed_actor);
             }
         }
         movie_dict["cast"] = cast_list;
@@ -264,6 +271,113 @@ private:
     std::string cast_;
 };
 
+// Custom binary search tree node for movies - moved after Movie class
+struct MovieNode {
+    Movie movie;
+    MovieNode* left;
+    MovieNode* right;
+    
+    MovieNode(const Movie& m) : movie(m), left(nullptr), right(nullptr) {}
+};
+
+// Custom linked list node for seat management
+struct SeatNode {
+    std::string seatId;
+    bool isBooked;
+    SeatNode* next;
+    
+    SeatNode(const std::string& id) : seatId(id), isBooked(false), next(nullptr) {}
+};
+
+// Seat manager using linked list for efficient updates
+class SeatManager {
+public:
+    SeatManager() : head(nullptr), size_(0) {}
+    
+    ~SeatManager() {
+        SeatNode* current = head;
+        while (current != nullptr) {
+            SeatNode* next = current->next;
+            delete current;
+            current = next;
+        }
+    }
+    
+    void addSeat(const std::string& seatId) {
+        if (head == nullptr) {
+            head = new SeatNode(seatId);
+            size_++;
+            return;
+        }
+        
+        // Check if seat already exists
+        SeatNode* current = head;
+        while (current->next != nullptr) {
+            if (current->seatId == seatId) return;
+            current = current->next;
+        }
+        if (current->seatId == seatId) return;
+        
+        current->next = new SeatNode(seatId);
+        size_++;
+    }
+    
+    bool bookSeat(const std::string& seatId) {
+        SeatNode* current = head;
+        while (current != nullptr) {
+            if (current->seatId == seatId) {
+                if (current->isBooked) return false;
+                current->isBooked = true;
+                return true;
+            }
+            current = current->next;
+        }
+        return false;  // Seat not found
+    }
+    
+    bool unbookSeat(const std::string& seatId) {
+        SeatNode* current = head;
+        while (current != nullptr) {
+            if (current->seatId == seatId) {
+                if (!current->isBooked) return false;
+                current->isBooked = false;
+                return true;
+            }
+            current = current->next;
+        }
+        return false;  // Seat not found
+    }
+    
+    bool isSeatBooked(const std::string& seatId) const {
+        SeatNode* current = head;
+        while (current != nullptr) {
+            if (current->seatId == seatId) {
+                return current->isBooked;
+            }
+            current = current->next;
+        }
+        return false;  // Seat not found, default to not booked
+    }
+    
+    std::vector<std::string> getBookedSeats() const {
+        std::vector<std::string> bookedSeats;
+        SeatNode* current = head;
+        while (current != nullptr) {
+            if (current->isBooked) {
+                bookedSeats.push_back(current->seatId);
+            }
+            current = current->next;
+        }
+        return bookedSeats;
+    }
+    
+    size_t size() const { return size_; }
+    
+private:
+    SeatNode* head;
+    size_t size_;
+};
+
 // Showtime class
 class Showtime {
 public:
@@ -285,26 +399,23 @@ public:
     std::string getScreenType() const { return screenType_; }
     double getPrice() const { return price_; }
     
-    // Methods for seats
+    // Methods for seats using the optimized SeatManager
     bool isSeatBooked(const std::string& seat) const {
-        return std::find(bookedSeats_.begin(), bookedSeats_.end(), seat) != bookedSeats_.end();
+        return seatManager_.isSeatBooked(seat);
     }
     
     void bookSeat(const std::string& seat) {
-        if (!isSeatBooked(seat)) {
-            bookedSeats_.push_back(seat);
-        }
+        // First ensure the seat exists in our manager
+        seatManager_.addSeat(seat);
+        seatManager_.bookSeat(seat);
     }
     
     void unbookSeat(const std::string& seat) {
-        auto it = std::find(bookedSeats_.begin(), bookedSeats_.end(), seat);
-        if (it != bookedSeats_.end()) {
-            bookedSeats_.erase(it);
-        }
+        seatManager_.unbookSeat(seat);
     }
     
     std::vector<std::string> getBookedSeats() const { 
-        return bookedSeats_; 
+        return seatManager_.getBookedSeats(); 
     }
     
     // Convert to Python dictionary
@@ -320,7 +431,7 @@ public:
         showtime_dict["price"] = price_;
         
         py::list booked_seats_list;
-        for (const auto& seat : bookedSeats_) {
+        for (const auto& seat : seatManager_.getBookedSeats()) {
             booked_seats_list.append(seat);
         }
         showtime_dict["bookedSeats"] = booked_seats_list;
@@ -394,7 +505,7 @@ private:
     std::string time_;
     std::string screenType_;
     double price_ = 0.0;
-    std::vector<std::string> bookedSeats_;
+    SeatManager seatManager_;  // Replace vector with efficient SeatManager
 };
 
 // Cinema class
@@ -578,22 +689,25 @@ public:
             }
         }
         
+        std::string id = dict.contains("id") ? dict["id"].cast<std::string>() : generate_uuid();
+        std::string userId = dict["userId"].cast<std::string>();
+        int movieId = dict["movieId"].cast<int>();
+        std::string movieTitle = dict.contains("movieTitle") ? dict["movieTitle"].cast<std::string>() : "";
+        std::string moviePoster = dict.contains("moviePoster") ? dict["moviePoster"].cast<std::string>() : "";
+        std::string showtimeId = dict["showtimeId"].cast<std::string>();
+        std::string showtimeDate = dict.contains("showtimeDate") ? dict["showtimeDate"].cast<std::string>() : "";
+        std::string showtimeTime = dict.contains("showtimeTime") ? dict["showtimeTime"].cast<std::string>() : "";
+        int cinemaId = dict.contains("cinemaId") ? dict["cinemaId"].cast<int>() : 0;
+        std::string cinemaName = dict.contains("cinemaName") ? dict["cinemaName"].cast<std::string>() : "";
+        std::string screenType = dict.contains("screenType") ? dict["screenType"].cast<std::string>() : "Standard";
+        double totalPrice = dict.contains("totalPrice") ? dict["totalPrice"].cast<double>() : 0.0;
+        std::string bookingDate = dict.contains("bookingDate") ? dict["bookingDate"].cast<std::string>() : get_current_date();
+        bool cancelled = dict.contains("cancelled") ? dict["cancelled"].cast<bool>() : false;
+        
         return Booking(
-            dict.contains("id") ? dict["id"].cast<std::string>() : generate_uuid(),
-            dict["userId"].cast<std::string>(),
-            dict["movieId"].cast<int>(),
-            dict.contains("movieTitle") ? dict["movieTitle"].cast<std::string>() : "",
-            dict.contains("moviePoster") ? dict["moviePoster"].cast<std::string>() : "",
-            dict["showtimeId"].cast<std::string>(),
-            dict.contains("showtimeDate") ? dict["showtimeDate"].cast<std::string>() : "",
-            dict.contains("showtimeTime") ? dict["showtimeTime"].cast<std::string>() : "",
-            dict.contains("cinemaId") ? dict["cinemaId"].cast<int>() : 0,
-            dict.contains("cinemaName") ? dict["cinemaName"].cast<std::string>() : "",
-            dict.contains("screenType") ? dict["screenType"].cast<std::string>() : "Standard",
-            seats,
-            dict.contains("totalPrice") ? dict["totalPrice"].cast<double>() : 0.0,
-            dict.contains("bookingDate") ? dict["bookingDate"].cast<std::string>() : get_current_date(),
-            dict.contains("cancelled") ? dict["cancelled"].cast<bool>() : false
+            id, userId, movieId, movieTitle, moviePoster, showtimeId,
+            showtimeDate, showtimeTime, cinemaId, cinemaName, screenType,
+            seats, totalPrice, bookingDate, cancelled
         );
     }
     
@@ -612,22 +726,25 @@ public:
             }
         }
         
+        std::string id = j.contains("id") && !j["id"].is_null() ? j["id"].get<std::string>() : generate_uuid();
+        std::string userId = j["userId"].get<std::string>();
+        int movieId = j["movieId"].get<int>();
+        std::string movieTitle = j.contains("movieTitle") && !j["movieTitle"].is_null() ? j["movieTitle"].get<std::string>() : "";
+        std::string moviePoster = j.contains("moviePoster") && !j["moviePoster"].is_null() ? j["moviePoster"].get<std::string>() : "";
+        std::string showtimeId = j["showtimeId"].get<std::string>();
+        std::string showtimeDate = j.contains("showtimeDate") && !j["showtimeDate"].is_null() ? j["showtimeDate"].get<std::string>() : "";
+        std::string showtimeTime = j.contains("showtimeTime") && !j["showtimeTime"].is_null() ? j["showtimeTime"].get<std::string>() : "";
+        int cinemaId = j.contains("cinemaId") && !j["cinemaId"].is_null() ? j["cinemaId"].get<int>() : 0;
+        std::string cinemaName = j.contains("cinemaName") && !j["cinemaName"].is_null() ? j["cinemaName"].get<std::string>() : "";
+        std::string screenType = j.contains("screenType") && !j["screenType"].is_null() ? j["screenType"].get<std::string>() : "Standard";
+        double totalPrice = j.contains("totalPrice") && !j["totalPrice"].is_null() ? j["totalPrice"].get<double>() : 0.0;
+        std::string bookingDate = j.contains("bookingDate") && !j["bookingDate"].is_null() ? j["bookingDate"].get<std::string>() : get_current_date();
+        bool cancelled = j.contains("cancelled") && !j["cancelled"].is_null() ? j["cancelled"].get<bool>() : false;
+        
         return Booking(
-            j.contains("id") && !j["id"].is_null() ? j["id"].get<std::string>() : generate_uuid(),
-            j["userId"].get<std::string>(),
-            j["movieId"].get<int>(),
-            j.contains("movieTitle") && !j["movieTitle"].is_null() ? j["movieTitle"].get<std::string>() : "",
-            j.contains("moviePoster") && !j["moviePoster"].is_null() ? j["moviePoster"].get<std::string>() : "",
-            j["showtimeId"].get<std::string>(),
-            j.contains("showtimeDate") && !j["showtimeDate"].is_null() ? j["showtimeDate"].get<std::string>() : "",
-            j.contains("showtimeTime") && !j["showtimeTime"].is_null() ? j["showtimeTime"].get<std::string>() : "",
-            j.contains("cinemaId") && !j["cinemaId"].is_null() ? j["cinemaId"].get<int>() : 0,
-            j.contains("cinemaName") && !j["cinemaName"].is_null() ? j["cinemaName"].get<std::string>() : "",
-            j.contains("screenType") && !j["screenType"].is_null() ? j["screenType"].get<std::string>() : "Standard",
-            seats,
-            j.contains("totalPrice") && !j["totalPrice"].is_null() ? j["totalPrice"].get<double>() : 0.0,
-            j.contains("bookingDate") && !j["bookingDate"].is_null() ? j["bookingDate"].get<std::string>() : get_current_date(),
-            j.contains("cancelled") && !j["cancelled"].is_null() ? j["cancelled"].get<bool>() : false
+            id, userId, movieId, movieTitle, moviePoster, showtimeId,
+            showtimeDate, showtimeTime, cinemaId, cinemaName, screenType,
+            seats, totalPrice, bookingDate, cancelled
         );
     }
 
@@ -666,14 +783,18 @@ public:
     }
     
     ~BookingSystem() {
-        // Remove the call to saveBookings to prevent overwriting the file on shutdown
-        // std::cout << "Bookings are not saved automatically on shutdown anymore." << std::endl;
+        // Clean up the movie binary search tree
+        clearMovieTree(movieTreeRoot_);
     }
     
-    // Movie operations
+    // Movie operations with optimized data structures
     void loadMovies(const std::string& filename) {
         std::lock_guard<std::mutex> lock(mutex_);
         movies_.clear();
+        movieMap_.clear();
+        popularMovies_ = std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::less<>>();
+        clearMovieTree(movieTreeRoot_);
+        movieTreeRoot_ = nullptr;
 
         try {
             // Read the JSON file
@@ -691,12 +812,16 @@ public:
                 return;
             }
 
-            // Process the movies
+            // Process the movies with optimized data structures
             if (data.is_array()) {
                 for (const auto& movie_json : data) {
                     try {
                         Movie movie = Movie::from_json(movie_json);
                         movies_.push_back(movie);
+                        // Add to movie map for O(1) lookups
+                        movieMap_[movie.getId()] = movie;
+                        // Add to the binary search tree
+                        insertMovieToTree(movieTreeRoot_, movie);
                     } catch (const std::exception& e) {
                         std::cerr << "Error parsing movie: " << e.what() << std::endl;
                     }
@@ -710,7 +835,7 @@ public:
                                        [movieId](const Movie& m) { return m.getId() == movieId; });
                 if (it == movies_.end()) {
                     // Create a placeholder movie with minimal details from the booking
-                    Movie placeholderMovie(
+                    movies_.push_back(Movie(
                         movieId,
                         booking.getMovieTitle(),
                         booking.getMoviePoster(),
@@ -723,8 +848,7 @@ public:
                         "", // No language available
                         "", // No director available
                         ""  // No cast available
-                    );
-                    movies_.push_back(placeholderMovie);
+                    ));
                 }
             }
 
@@ -739,12 +863,41 @@ public:
         return movies_;
     }
     
+    // Get movies in sorted order using in-order traversal of BST
+    std::vector<Movie> getSortedMovies() const {
+        std::lock_guard<std::mutex> lock(mutex_);
+        std::vector<Movie> sortedMovies;
+        inOrderTraversal(movieTreeRoot_, sortedMovies);
+        return sortedMovies;
+    }
+    
+    // Get popular movies using priority queue
+    std::vector<Movie> getPopularMovies(int count) const {
+        std::lock_guard<std::mutex> lock(mutex_);
+        // Create a copy of the priority queue to avoid modifying it
+        auto pq = popularMovies_;
+        std::vector<Movie> result;
+        
+        while (!pq.empty() && count > 0) {
+            int movieId = pq.top().second;
+            pq.pop();
+            
+            auto it = movieMap_.find(movieId);
+            if (it != movieMap_.end()) {
+                result.push_back(it->second);
+                count--;
+            }
+        }
+        
+        return result;
+    }
+    
     Movie getMovieById(int id) const {
         std::lock_guard<std::mutex> lock(mutex_);
-        auto it = std::find_if(movies_.begin(), movies_.end(),
-                               [id](const Movie& m) { return m.getId() == id; });
-        if (it != movies_.end()) {
-            return *it;
+        // O(1) lookup using hash map
+        auto it = movieMap_.find(id);
+        if (it != movieMap_.end()) {
+            return it->second;
         }
         // Return empty movie if not found
         return Movie();
@@ -843,9 +996,9 @@ public:
                 std::istringstream genres_stream(genres_str);
                 std::string genre;
                 while (std::getline(genres_stream, genre, ',')) {
-                    genre = trim(genre);
-                    if (!genre.empty()) {
-                        genres_json.push_back(genre);
+                    std::string trimmed_genre = trim(genre);
+                    if (!trimmed_genre.empty()) {
+                        genres_json.push_back(trimmed_genre);
                     }
                 }
                 movie_json["genres"] = genres_json;
@@ -859,9 +1012,9 @@ public:
                 std::istringstream cast_stream(cast_str);
                 std::string actor;
                 while (std::getline(cast_stream, actor, ',')) {
-                    actor = trim(actor);
-                    if (!actor.empty()) {
-                        cast_json.push_back(actor);
+                    std::string trimmed_actor = trim(actor);
+                    if (!trimmed_actor.empty()) {
+                        cast_json.push_back(trimmed_actor);
                     }
                 }
                 movie_json["cast"] = cast_json;
@@ -886,10 +1039,12 @@ public:
         }
     }
     
-    // Cinema operations
+    // Cinema operations with optimized hash maps
     void loadCinemas(const std::string& filename) {
         std::lock_guard<std::mutex> lock(mutex_);
         cinemas_.clear();
+        cinemaMap_.clear();
+        showtimeMap_.clear();
         
         try {
             // Read the JSON file
@@ -907,12 +1062,19 @@ public:
                 return;
             }
             
-            // Process the cinemas
+            // Process the cinemas with hash maps for O(1) lookup
             if (data.is_array()) {
                 for (const auto& cinema_json : data) {
                     try {
                         Cinema cinema = Cinema::from_json(cinema_json);
                         cinemas_.push_back(cinema);
+                        // Add to cinema map for O(1) lookups
+                        cinemaMap_[cinema.getId()] = cinema;
+                        
+                        // Add showtimes to showtime map for O(1) lookups
+                        for (const auto& showtime : cinema.getShowtimes()) {
+                            showtimeMap_[showtime.getId()] = showtime;
+                        }
                     } catch (const std::exception& e) {
                         std::cerr << "Error parsing cinema: " << e.what() << std::endl;
                     }
@@ -932,10 +1094,10 @@ public:
     
     Cinema getCinemaById(int id) const {
         std::lock_guard<std::mutex> lock(mutex_);
-        auto it = std::find_if(cinemas_.begin(), cinemas_.end(),
-                              [id](const Cinema& c) { return c.getId() == id; });
-        if (it != cinemas_.end()) {
-            return *it;
+        // O(1) lookup using hash map
+        auto it = cinemaMap_.find(id);
+        if (it != cinemaMap_.end()) {
+            return it->second;
         }
         // Return empty cinema if not found
         return Cinema();
@@ -1047,7 +1209,7 @@ public:
         }
     }
     
-    // Showtime operations
+    // Showtime operations with optimized hash maps
     bool addShowtime(const py::dict& showtimeData) {
         try {
             // Validate required fields
@@ -1075,11 +1237,24 @@ public:
             // Lock for thread safety
             std::lock_guard<std::mutex> lock(mutex_);
 
+            // Add to showtime map for O(1) lookups
+            showtimeMap_[id] = showtime;
+
             // Find the cinema and add the showtime
-            auto it = std::find_if(cinemas_.begin(), cinemas_.end(),
-                                   [cinemaId](const Cinema& c) { return c.getId() == cinemaId; });
-            if (it != cinemas_.end()) {
-                it->addShowtime(showtime);
+            auto it = cinemaMap_.find(cinemaId);
+            if (it != cinemaMap_.end()) {
+                // Update both the vector of cinemas and the cinema in the map
+                for (auto& cinema : cinemas_) {
+                    if (cinema.getId() == cinemaId) {
+                        cinema.addShowtime(showtime);
+                        break;
+                    }
+                }
+                
+                Cinema updated = it->second;
+                updated.addShowtime(showtime);
+                cinemaMap_[cinemaId] = updated;
+                
                 std::cout << "Added showtime with ID: " << id << " to cinema: " << cinemaId << std::endl;
                 return true;
             } else {
@@ -1091,6 +1266,27 @@ public:
         }
     }
 
+    // O(1) lookup for showtime using hash map
+    Showtime getShowtimeById(const std::string& id) const {
+        std::lock_guard<std::mutex> lock(mutex_);
+        auto it = showtimeMap_.find(id);
+        if (it != showtimeMap_.end()) {
+            return it->second;
+        }
+        
+        // Fallback to the old method if not found in the map
+        for (const auto& cinema : cinemas_) {
+            for (const auto& showtime : cinema.getShowtimes()) {
+                if (showtime.getId() == id) {
+                    return showtime;
+                }
+            }
+        }
+        
+        // Return empty showtime if not found
+        return Showtime();
+    }
+    
     std::vector<Showtime> getShowtimesByMovie(int movieId) const {
         std::lock_guard<std::mutex> lock(mutex_);
         std::vector<Showtime> result;
@@ -1134,20 +1330,6 @@ public:
         }
         
         return result;
-    }
-    
-    Showtime getShowtimeById(const std::string& id) const {
-        std::lock_guard<std::mutex> lock(mutex_);
-        for (const auto& cinema : cinemas_) {
-            for (const auto& showtime : cinema.getShowtimes()) {
-                if (showtime.getId() == id) {
-                    return showtime;
-                }
-            }
-        }
-        
-        // Return empty showtime if not found
-        return Showtime();
     }
     
     std::vector<std::string> getBookedSeatsForShowtime(const std::string& showtimeId) const {
@@ -1424,6 +1606,21 @@ public:
             analytics["cancellationRate"] = 0.0;
         }
         
+        // Update popularMovies_ priority queue based on bookings
+        std::unordered_map<int, int> tempMovieBookings;
+        
+        for (const auto& booking : bookings_) {
+            if (!booking.isCancelled()) {
+                tempMovieBookings[booking.getMovieId()]++;
+            }
+        }
+        
+        // Clear and rebuild priority queue
+        popularMovies_ = std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::less<>>();
+        for (const auto& [movieId, count] : tempMovieBookings) {
+            popularMovies_.push({count, movieId});
+        }
+        
         return analytics;
     }
     
@@ -1463,7 +1660,52 @@ private:
     std::vector<Movie> movies_;
     std::vector<Cinema> cinemas_;
     std::vector<Booking> bookings_;
+    
+    // Optimized data structures for O(1) lookups
+    std::unordered_map<int, Movie> movieMap_;
+    std::unordered_map<int, Cinema> cinemaMap_;
+    std::unordered_map<std::string, Showtime> showtimeMap_;
+    
+    // BST for sorted movie access
+    MovieNode* movieTreeRoot_ = nullptr;
+    
+    // Priority queue for popular movies (count, movieId)
+    mutable std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::less<>> popularMovies_;
+    
+    // Cache for frequent lookups
+    mutable std::unordered_map<std::string, std::vector<std::string>> bookedSeatsCache_;
+    
     mutable std::mutex mutex_;
+    
+    // BST operations
+    void insertMovieToTree(MovieNode*& root, const Movie& movie) {
+        if (root == nullptr) {
+            root = new MovieNode(movie);
+            return;
+        }
+        
+        if (movie.getTitle() < root->movie.getTitle()) {
+            insertMovieToTree(root->left, movie);
+        } else {
+            insertMovieToTree(root->right, movie);
+        }
+    }
+    
+    void clearMovieTree(MovieNode* root) {
+        if (root == nullptr) return;
+        
+        clearMovieTree(root->left);
+        clearMovieTree(root->right);
+        delete root;
+    }
+    
+    void inOrderTraversal(MovieNode* root, std::vector<Movie>& result) const {
+        if (root == nullptr) return;
+        
+        inOrderTraversal(root->left, result);
+        result.push_back(root->movie);
+        inOrderTraversal(root->right, result);
+    }
     
     // Helper methods
     void updateShowtimeSeats(const std::string& showtimeId, const std::vector<std::string>& seats, bool isBooking) {
@@ -1476,8 +1718,15 @@ private:
         std::cout << std::endl;
     }
     
-    // Non-locking version for internal use when lock is already held
+    // Optimized version with caching
     std::vector<std::string> getBookedSeatsForShowtimeInternal(const std::string& showtimeId) const {
+        // Check cache first
+        auto cacheIt = bookedSeatsCache_.find(showtimeId);
+        if (cacheIt != bookedSeatsCache_.end()) {
+            return cacheIt->second;
+        }
+        
+        // If not in cache, compute and store
         std::vector<std::string> bookedSeats;
         
         for (const auto& booking : bookings_) {
@@ -1486,6 +1735,9 @@ private:
                 bookedSeats.insert(bookedSeats.end(), seats.begin(), seats.end());
             }
         }
+        
+        // Store in cache
+        bookedSeatsCache_[showtimeId] = bookedSeats;
         
         return bookedSeats;
     }
@@ -1714,14 +1966,16 @@ PYBIND11_MODULE(cinema_engine, m) {
         .def(py::init<>())
         .def("loadMovies", &BookingSystem::loadMovies)
         .def("getAllMovies", &BookingSystem::getAllMovies)
+        .def("getSortedMovies", &BookingSystem::getSortedMovies) // Add the new method
+        .def("getPopularMovies", &BookingSystem::getPopularMovies) // Add the new method
         .def("getMovieById", &BookingSystem::getMovieById)
-        .def("addMovie", &BookingSystem::addMovie)  // Add binding for addMovie
-        .def("saveMovies", &BookingSystem::saveMovies)  // Add binding for saveMovies
+        .def("addMovie", &BookingSystem::addMovie) 
+        .def("saveMovies", &BookingSystem::saveMovies)
         .def("loadCinemas", &BookingSystem::loadCinemas)
         .def("getAllCinemas", &BookingSystem::getAllCinemas)
         .def("getCinemaById", &BookingSystem::getCinemaById)
-        .def("addCinema", &BookingSystem::addCinema)  // Add binding for addCinema
-        .def("saveCinemas", &BookingSystem::saveCinemas)  // Add binding for saveCinemas
+        .def("addCinema", &BookingSystem::addCinema)
+        .def("saveCinemas", &BookingSystem::saveCinemas)
         .def("getShowtimesByMovie", &BookingSystem::getShowtimesByMovie)
         .def("getShowtimesByDate", &BookingSystem::getShowtimesByDate)
         .def("getShowtimesByMovieAndDate", &BookingSystem::getShowtimesByMovieAndDate)
